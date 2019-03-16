@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+    var q =
+        squel.update({
+            autoQuoteFieldNames: true
+        })
+        .table("${1:user}")
+        .setFields(array)
+        .where("${2:id}=?", ${2:id})
+        .toParam()
+
+    db.query(q.text,q.values, function(err, rows, fields) {
+        if (err) throw err
+
+    })
+]]></content>
+	<tabTrigger>db_update</tabTrigger>
+	<scope>source.js, text.html.basic, text.plain</scope>
+	<description>Nodejs sql update</description>
+</snippet>

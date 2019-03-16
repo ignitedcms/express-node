@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+    var q =
+         squel.delete({
+            autoQuoteFieldNames: true
+        })
+         .from("${1:user}")
+         .where("${2:id}=?", ${2:id})
+         .toParam()
+
+     db.query(q.text,q.values, function(err, rows, fields) {
+         if (err) throw err
+     })
+]]></content>
+	<tabTrigger>db_delete</tabTrigger>
+	<scope>source.js, text.html.basic, text.plain</scope>
+	<description>Nodejs sql delete</description>
+</snippet>

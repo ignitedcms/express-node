@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Express Node</title>
+    
+    <style type="text/css">
+
+    .my-center{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .text-center{
+        text-align: center;
+    }
+
+    .container
+    {
+        margin: 0 auto;
+        max-width: 960px;
+    }
+    .mt{
+        margin-top: 10px;
+    }
+
+    .errors{
+
+        padding: 5px;
+        border-radius: 2px;
+        background-color: #f7b8b8;
+    }
+
+    </style>
+</head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <img src="/assets/ig.png"  alt="logo" class="my-center"/>
+            </div>
+            <div id="menu">
+                <a href="/user">Users</a>
+                <a href="/login/loginview">Login</a>
+                <a href="/upload/upload">Upload test</a>
+                <a href="/email/mailer">Email Test</a>
+                <a href="/session/set">Set session</a>
+                <a href="/session/test">Test session</a>
+                <a href="/session/logout">Destroy session</a>
+            </div>
+                {{{body}}}
+        </div>
+    </body>
+</html>

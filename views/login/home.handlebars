@@ -1,0 +1,31 @@
+
+{{title}}
+<div id="app">
+    <div class="row">
+        <div class="mt"><a href="/user/newuser">Insert user</a> <br/></div>
+        
+        <div class="full column">
+            <table class="u-full-width">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    
+                    <th>Join Date</th>
+                    <th>Action</th>
+                    <th>Delete</th>
+                    
+                  </tr>
+                </thead>
+                {{#each rows}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{moment joindate format="YYYY-MM-DD"}}</td>
+                    <td><a href="/user/edit/{{id}}">edit</a> </td>
+                    <td><a href="/user/delete/{{id}}">delete</a></td> 
+                </tr>
+                 {{/each}}
+            </table>
+        </div>
+    </div>
+</div>
+

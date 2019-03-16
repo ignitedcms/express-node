@@ -1,0 +1,40 @@
+<snippet>
+	<content><![CDATA[
+	let ${1:name} = req.body.${1:name};
+    let ${2:name} = req.body.${2:name};
+
+    var values = []
+
+    req.checkBody('${1:name}', 'Name is required').notEmpty();
+    req.checkBody('${2:name}', '${2:name} is required ').notEmpty();
+
+    var errors = req.validationErrors();
+    //failue
+    if (errors) {
+        var er = "";
+
+        var arr = errors;
+        for (var i = 0; i < arr.length; i++) {
+            var er = er + arr[i].msg + " ";
+        }
+
+        res.render('login/newuser', {
+            errors: er
+        });
+    } else {
+       
+        /*======================================
+        Success hash the password
+        ========================================*/
+        
+        //insert the user
+        user_model.insert_user(insert)
+
+        //direct to home page
+        res.redirect('/user');
+    }
+]]></content>
+	<tabTrigger>validation</tabTrigger>
+	<scope>source.js, text.html.basic, text.plain</scope>
+	<description>Nodejs form validation</description>
+</snippet>

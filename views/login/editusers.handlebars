@@ -1,0 +1,13 @@
+
+<h1>Edit User</h1>
+<form action="/user/edited/{{id}}" method="post">
+    {{#each rows}}
+    <label>Name</label>
+    <input type="text" name="name" id="" value="{{name}}" />
+    <br/>
+    <label>Password</label>
+    <input type="password" name="password" id="" value="{password}}" />
+    <br/>
+    {{/each}}
+    <button type="submit" >OK</button>
+</form>

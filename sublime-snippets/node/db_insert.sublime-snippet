@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+    var q =
+        squel.insert({
+            autoQuoteFieldNames: true
+        })
+        .into("${1:user}")
+        .setFields(array)
+        .toParam()
+
+    db.query(q.text,q.values, function(err, rows, fields) {
+        if (err) throw err
+
+    })
+]]></content>
+	<tabTrigger>db_insert</tabTrigger>
+	<scope>source.js, text.html.basic, text.plain</scope>
+	<description>Nodejs sql insert</description>
+</snippet>

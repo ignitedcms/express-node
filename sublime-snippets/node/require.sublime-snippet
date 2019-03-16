@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+var ${1:bcrypt} = require('${2:bcrypt}'); //${3:description}
+]]></content>
+	<tabTrigger>require</tabTrigger>
+	<scope>source.js, text.html.basic, text.plain</scope>
+	<description>Nodejs Base require modules</description>
+</snippet>

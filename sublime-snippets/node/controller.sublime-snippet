@@ -1,0 +1,40 @@
+<snippet>
+	<content><![CDATA[
+//------------------------------
+//
+//  File Name: ${1:Upload helper}
+//
+//  Description:
+//  
+//  ${2:Description}
+//
+//
+//
+//-------------------------------
+
+var express = require('express');
+var router = express.Router();
+
+router.get('/${3:route}', function(req, res) {
+    res.render('${4:route}', {
+        title: 'newuser'
+    });
+});
+
+
+router.post('/${5:route}/:${6:id}', function(req, res) {
+
+    //first get the id from the query parameter
+    var id = req.params.id;
+    res.redirect("/${7:route}")
+
+
+});
+
+
+module.exports = router;
+]]></content>
+	<tabTrigger>controller</tabTrigger>
+	<scope>source.js, text.html.basic, text.plain</scope>
+	<description>Nodejs Base controller uses routes</description>
+</snippet>

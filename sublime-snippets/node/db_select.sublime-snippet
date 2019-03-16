@@ -1,0 +1,30 @@
+<snippet>
+	<content><![CDATA[
+    var q =
+      squel.select({ autoQuoteFieldNames: true })
+      .from("${1:user}")
+      .where("${2:name}=?",${2:name})
+      .toParam();
+
+    db.query(q.text,q.values, function(err, rows, fields) {
+    if (err) throw err
+
+      /*======================================
+      check if no row returned!!!!!
+      ========================================*/
+      if(rows.length > 0)
+      {
+         res.send(rows);
+      }
+      else
+      {
+        res.render('login/login', {
+           errors: 'User does not exist!'
+        });
+      }
+    })
+]]></content>
+	<tabTrigger>db_select</tabTrigger>
+	<scope>source.js, text.html.basic, text.plain</scope>
+	<description>Nodejs sql select</description>
+</snippet>
